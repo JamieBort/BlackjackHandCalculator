@@ -18,21 +18,19 @@
 
 // declare variables
 
-let J = 10;
-let Q = 10;
-let K = 10;
-// let J="J";
-// let Q="Q";
-// let K="K";
-let A = 11;
+let J = "J";
+let Q = "Q";
+let K = "K";
+let A = "A";
 let deck = [];
 let faceCards = [J, Q, K, A];
 let fullDeck = []
 
-console.log(J);
-console.log(Q);
-console.log(K);
-console.log(A);
+// check via console.log();
+// console.log(J);
+// console.log(Q);
+// console.log(K);
+// console.log(A);
 // console.log(deck);
 // console.log(faceCards);
 
@@ -44,7 +42,7 @@ for (var i = 2; i < 11; i++) {
 
 deck.push(faceCards[0], faceCards[1], faceCards[2], faceCards[3]);
 
-console.log(deck);
+console.log("The " + deck.length + " cards in the deck are " + deck + ".");
 
 // for (var i = 0; i < deck.length; i++) {
 //   for (var k = 0; k < 3; k++) {
@@ -59,9 +57,7 @@ for (var i = 0; i < deck.length; i++) {
   fullDeck.push(deck[i]);
 }
 
-// console.log(fullDeck);
-console.log(fullDeck.length);
-
+console.log("The " + fullDeck.length + " cards in the deck are " + fullDeck + ".");
 // ========================
 // end of building deck
 // ========================
@@ -84,23 +80,81 @@ function getRandomArbitrary(min, max) {
 // ====================================
 // declare variables
 
-let firstCard = getRandomArbitrary(0, 53);
-let secondCard = getRandomArbitrary(0, 53);
-let thirdCard = getRandomArbitrary(0, 53);
+
+
+// determine the position of the element that is selected randomly from the array fullDeck
+
+let firstElPos = getRandomArbitrary(0, 52);
+let secondElPos = getRandomArbitrary(0, 52);
+let thirdElPos = getRandomArbitrary(0, 52);
 let handPts;
 let maxPts = 21;
 
-console.log(firstCard);
-console.log(secondCard);
-console.log(thirdCard);
+console.log("The first position of the element that is selected radomly from the full deck of cards is " + firstElPos + ".");
+console.log("The second position of the element that is selected radomly from the full deck of cards is " + secondElPos + ".");
+console.log("The first position of the element that is selected radomly from the full deck of cards is " + thirdElPos + ".");
 
-let firstCardPts = fullDeck[firstCard];
-let secondCardPts = fullDeck[secondCard];
-let thirdCardPts = fullDeck[thirdCard];
+// (rename: firstCardPts to firstCardName)
+// (rename: secondCardPts to secondCardName)
+// (rename: thirdCardPts to thirdCardName)
 
-console.log(firstCardPts);
-console.log(secondCardPts);
-console.log(thirdCardPts);
+let firstCardName = fullDeck[firstElPos];
+let secondCardName = fullDeck[secondElPos];
+let thirdCardName = fullDeck[thirdElPos];
+
+console.log("The first card is " + firstCardName + ".");
+console.log("The second card is " + secondCardName + ".");
+console.log("The third card is " + thirdCardName + ".");
+
+
+// the following for statement is not necessary
+
+// for (var i = 0; i < array.length; i++) {
+//   array[i]
+// }
+
+if (firstCardName === "J" || firstCardName === "Q" || firstCardName === "K") {
+  firstCardName = 10;
+  J = 10;
+  Q = 10;
+  K = 10;
+} else if (firstCardName === "A") {
+  firstCardName = 11
+}
+
+console.log(firstCardName);
+
+if (secondCardName === "J" || secondCardName === "Q" || secondCardName === "K") {
+  secondCardName = 10;
+  J = 10;
+  Q = 10;
+  K = 10;
+} else if (secondCardName === "A") {
+  secondCardName = 11
+}
+
+
+
+
+console.log(secondCardName);
+
+if (thirdCardName === "J" || thirdCardName === "Q" || thirdCardName === "K") {
+  thirdCardName = 10;
+  J = 10;
+  Q = 10;
+  K = 10;
+
+} else if (thirdCardName === "A") {
+  thirdCardName = 11
+}
+
+console.log(thirdCardName);
+
+// console.log("The value of Jack is " + J + ".");
+// console.log("The value of Queen is " + Q + ".");
+// console.log("The value of King is " + K + ".");
+
+
 // ====================================
 
 
@@ -110,26 +164,47 @@ console.log(thirdCardPts);
 // calculate value of A
 // ====================================
 
-handPts = firstCardPts;
-console.log(handPts);
 
-if (handPts < (maxPts - 11)) {
+
+handPts = firstCardName;
+console.log("The value of the first card is " + handPts + ".");
+
+
+handPts = firstCardName + secondCardName;
+console.log("The sum of the values of the first two cards is " + handPts + ".");
+
+console.log( "The value of the hand is " + handPts);
+console.log(maxPts);
+console.log( "The value of the max is " + (maxPts-11));
+console.log(K);
+
+if ( 11 < ( maxPts - handPts )) {
+  console.log("yo yo");
   A = 1;
+  console.log( "first " + A );
+} else {
+  A = 11;
 }
-console.log(A);
 
+console.log( "second " + A );
 
-handPts = firstCardPts + secondCardPts;
-console.log(handPts);
+// if (handPts > (maxPts - 11)) {
+//   console.log("yo");
+//   // A = 1;
+// }
+console.log("The value of the Ace is now " + A + ". fix this    ***********         .");
 
-if (handPts < (maxPts - 11)) {
-  A = 1;
+// console.log("this" + A);
+
+handPts = firstCardName + secondCardName + thirdCardName;
+
+console.log("The sum of the values of the three cards is " + handPts + ".");
+
+if (handPts > 21) {
+  console.log("You lose.");
+} else if (true) {
+  console.log("You win.");
 }
-console.log(A);
-
-
-handPts = firstCardPts + secondCardPts + thirdCardPts;
-console.log(handPts);
 
 console.log(handPts);
 console.log(maxPts);
@@ -174,9 +249,21 @@ console.log(A);
 // console.log(deck.length);
 
 function handValue(hand) {
+  // The instructions:
+  // Taking this into consideration, were you to build a Blackjack game, you would need a function that can take any hand and return the total value of that hand. This function would be used a lot in your game. It should take an array of cards as an argument and return a single number. The number should be the value of the hand.
+let firstCardName = 2;
+let secondCardName = 2;
+let thirdCardName = 8;
 
 
-  return;
+  hand = [firstCardName, secondCardName, thirdCardName];
+
+console.log(firstCardName);
+console.log(secondCardName);
+console.log(thirdCardName);
+console.log(handValue);
+
+  return hand[0] + hand[1] + hand[2];
 }
 
 
