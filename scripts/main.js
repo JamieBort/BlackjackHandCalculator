@@ -9,7 +9,7 @@
    write your logic.
 */
 
-// We are given a variable hand = that array.
+// We are given a variable hand = an array.
 // Is that hand a number?
 // Assign 10 to the face cards.
 
@@ -24,46 +24,19 @@ function handValue(hand) {
     } else {
       handTotal += 11;
     }
+    console.log(hand);
+  })
+
+  hand.forEach(function(hand) {
     if (hand === 'A') {
       if (handTotal > 21) {
         handTotal -= 10;
       }
     }
-    console.log(hand);
-  })
+  });
   console.log(handTotal);
   return handTotal;
 };
-
-
-
-
-
-
-// function handValue(hand) {
-//   let sum = 0;
-//   for (var i = 0; i < hand.length; i++) {
-//     if (isNaN(hand[i])) {
-//       if ( (hand[i] != 'A') && (hand[i] != 'K') && (hand[i] != 'Q' )&& (hand[i] != 'J') ) {
-//       sum += 10;
-//     }
-//   } else {
-//     sum += hand[i];
-//   }
-//   // console.log(sum);
-// }
-// for (var i = 0; i < hand.length; i++) {
-//   if (hand[i] === 'A') {
-//     if (sum > 11) {
-//       sum += 1
-//     } else {
-//       sum += 11;
-//     }
-//   }
-// }
-// console.log(sum);
-// return sum;
-// }
 
 /* -----  Hints ------
 
