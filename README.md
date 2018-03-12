@@ -28,7 +28,7 @@ handValue( [ "K", "A" ] ) === 21;
 
 Start with the starter files below, and open `index.html` file in your browser. Open the JavaScript console. Your screen should look similar to the screenshot below.
 
-![screenshot](93f5882c-blackjack-tests.png)
+![screenshot](https://github.com/JamieBort/BlackjackHandCalculator/blob/master/images/93f5882c-blackjack-tests.png)
 
 Your goal is to write a function called `handValue` that takes an array of cards and returns the total value. The interesting part of this is how Blackjack does the scoring. Here are the rules:
 
