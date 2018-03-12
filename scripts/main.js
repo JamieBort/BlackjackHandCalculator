@@ -5,15 +5,27 @@
    to watch the assertions pass as you write your code.
 
    Also remember, that the parameter `hand` will be an array, so
-   you'll need to parse through that first before you can start to 
+   you'll need to parse through that first before you can start to
    write your logic.
 */
 
+var hand = [];
+var dummyHand = [];
+
+hand.forEach(function(item){
+for (var i = 0; i < item.length; i++) {
+  a = 0;
+  a += item[i];
+}
+});
 
 function handValue (hand) {
-
-
-  return;
+  var j = 10;
+  var q = 10;
+  var k = 10;
+  hand.
+  // console.log("Hello");
+  return hand;
 }
 
 
