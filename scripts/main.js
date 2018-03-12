@@ -9,40 +9,33 @@
    write your logic.
 */
 
-var hand = [];
-
-// This function totals up the hand.
-// var j = 10;
-// var q = 10;
-// var k = 10;
 
 function handValue(hand) {
-  total = 0;
+  var handTotal = 0;
   for (i = 0; i < hand.length; i++) {
-    // console.log(typeof hand[i]);
-    // console.log(hand[i]);
-
     if ((hand[i] === "j") || (hand[i] === "q") || (hand[i] === "k")) {
       hand[i] = "10";
     };
-    if ((hand[i] === "a") && (total < 15) ) {
-      hand[i] = "10";
-    }else {
-      hand[i] = "1";
+    if (hand[i] === "a") {
+      hand[i] = "11";
     };
+    console.log(handTotal, "first before");
+    handTotal += Number(hand[i]);
+    console.log(handTotal, "first after");
 
-    total += Number(hand[i]);
-    if (total > 22) {
-      console.log("game over. you lose. The total is " + total);
-      return;
-    }
-    // console.log(item[i], "the " +i+" item");
-    console.log("the current total is " + total);
-    // console.log(total, "after " + i + " items");
-  }
-  console.log("the final total is " + total);
-  return total;
+    if ( (handTotal > 10) && (hand[i] === "11") ) {
+      // hand[i] = "1";
+      console.log(handTotal, "second before");
+      handTotal -= 10;
+      console.log(handTotal, "second after");
+    };
+    // console.log(typeof total);
+  };
+  // console.log(total);
+  return handTotal;
 };
+
+
 
 
 /* -----  Hints ------
