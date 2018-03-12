@@ -10,23 +10,34 @@
 */
 
 var hand = [];
-var dummyHand = [];
 
-hand.forEach(function(item){
-for (var i = 0; i < item.length; i++) {
-  a = 0;
-  a += item[i];
-}
-});
+// This function totals up the hand.
+var j = 10;
+var q = 10;
+var k = 10;
 
-function handValue (hand) {
-  var j = 10;
-  var q = 10;
-  var k = 10;
-  hand.
-  // console.log("Hello");
-  return hand;
-}
+function handValue(hand) {
+  total = 0;
+  for (i = 0; i < hand.length; i++) {
+    // console.log(typeof hand[i]);
+    // console.log(hand[i]);
+    for(i=0; i<array.length; i++){
+      if( ( array[i] === "j" ) || ( array[i] === "q" )   || ( array[i] === "k" )  ) {
+    // [add that card to the hand]
+    }	 };
+    
+    total += Number(hand[i]);
+    if (total > 22) {
+      console.log("game over. you lose. The total is " + total);
+      return;
+    }
+    // console.log(item[i], "the " +i+" item");
+    console.log("the current total is " + total);
+    // console.log(total, "after " + i + " items");
+  }
+  console.log("the final total is " + total);
+  return total;
+};
 
 
 /* -----  Hints ------
