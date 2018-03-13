@@ -10,30 +10,34 @@
 */
 
 
+
 function handValue(hand) {
   var handTotal = 0;
   for (i = 0; i < hand.length; i++) {
-    if ((hand[i] === "j") || (hand[i] === "q") || (hand[i] === "k")) {
+    if ((hand[i] === "J") || (hand[i] === "Q") || (hand[i] === "K")) {
       hand[i] = "10";
     };
-    if (hand[i] === "a") {
+    if (hand[i] === "A") {
       hand[i] = "11";
     };
-    console.log(handTotal, "first before");
+    // console.log(handTotal, "first before");
     handTotal += Number(hand[i]);
-    console.log(handTotal, "first after");
+    // console.log(handTotal, "first after");
 
-    if ( (handTotal > 10) && (hand[i] === "11") ) {
+    if ( (hand.length >= 3) && (handTotal > 17) && (hand[i] === "11") ) {
       // hand[i] = "1";
-      console.log(handTotal, "second before");
+      // console.log(handTotal, "second before");
       handTotal -= 10;
-      console.log(handTotal, "second after");
+      // console.log(handTotal, "second after");
     };
+
+    
     // console.log(typeof total);
   };
-  // console.log(total);
+  console.log(handTotal);
   return handTotal;
 };
+
 
 
 
